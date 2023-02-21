@@ -1,0 +1,36 @@
+.address__location--color {
+    color: $whiteExtraColor;
+}
+
+.address__email,
+.address__phone {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.address__location,
+.address__email {
+    margin-bottom: 8px;
+}
+
+.address__phone {
+    margin-bottom: 60px;
+}
+
+.address__location,
+.address__email,
+.address__phone {
+    display: inline-block;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    text-decoration: none;
+
+    @include transition(color);
+
+    &:hover,
+    &:focus {
+        color: $accentColor;
+    }
+}
+

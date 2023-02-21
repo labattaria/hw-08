@@ -1,0 +1,22 @@
+.page-footer {
+    display: block;
+    background-color: $mainBgColor;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    &__container {
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    @media screen and (max-width: 1199px) {
+        text-align: center;
+        justify-content: center;
+    }
+    
+    }
+}
