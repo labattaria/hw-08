@@ -6,7 +6,7 @@
     background-image: linear-gradient(to right,
             rgba(47, 48, 58, 0.4),
             rgba(47, 48, 58, 0.4)),
-        url("/images/hero/mobile/img.jpg");
+        url("/images/hero/mobile/img.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-color: $mainBgColor;
@@ -35,7 +35,7 @@
         background-image: linear-gradient(to right,
             rgba(47, 48, 58, 0.4),
             rgba(47, 48, 58, 0.4)),
-        url("/images/hero/mobile/img@2x.jpg");
+        url("/images/hero/mobile/img@2x.webp");
     }
 }
 
@@ -56,7 +56,7 @@
         background-image: linear-gradient(to right,
             rgba(47, 48, 58, 0.4),
             rgba(47, 48, 58, 0.4)),
-        url("/images/hero/tablet/img.jpg");
+        url("/images/hero/tablet/img.webp");
     }
 
     @media (min-device-pixel-ratio: 2),
@@ -68,7 +68,7 @@
             background-image: linear-gradient(to right,
                 rgba(47, 48, 58, 0.4),
                 rgba(47, 48, 58, 0.4)),
-            url("/images/hero/tablet/img@2x.jpg");
+            url("/images/hero/tablet/img@2x.webp");
         }
     }
 }
@@ -78,7 +78,7 @@
         background-image: linear-gradient(to right,
             rgba(47, 48, 58, 0.4),
             rgba(47, 48, 58, 0.4)),
-        url("/images/hero/desktop/img.jpg");
+        url("/images/hero/desktop/img.webp");
     }
 
     @media (min-device-pixel-ratio: 2),
@@ -90,7 +90,7 @@
             background-image: linear-gradient(to right,
                 rgba(47, 48, 58, 0.4),
                 rgba(47, 48, 58, 0.4)),
-            url("/images/hero/desktop/img@2x.jpg");
+            url("/images/hero/desktop/img@2x.webp");
         }
     }
 }
