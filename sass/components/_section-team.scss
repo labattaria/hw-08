@@ -1,0 +1,124 @@
+.team {
+    background-color: getColor(btn-bg);
+}
+
+.team__list {
+    @extend %list;
+
+    @media screen and (min-width: getSize(tablet)) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        margin-top: - getProperty(gap-gallery);
+        margin-left: - getProperty(gap-gallery);
+    }
+
+    @media screen and (min-width: getSize(desktop)) {
+        flex-wrap: nowrap;
+        margin: 0;
+    }
+}
+
+.team__item {
+    margin: 0 auto;
+    margin-bottom: 30px;
+
+    max-width: 450px;
+
+    background-color: getColor(active-white);
+    box-shadow: getShadow(team-card);
+    border-radius: 0px 0px 4px 4px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @media screen and (min-width: getSize(tablet)) {
+        margin-top: getProperty(gap-gallery);
+        margin-right: 0;
+        margin-left: getProperty(gap-gallery);
+        margin-bottom: 0;
+
+        flex-basis: calc((100% - 60px) / 2);
+    }
+
+    @media screen and (min-width: getSize(desktop)) {
+        margin: 0;
+        flex-basis: calc((100% - 90px) / 4);
+
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
+}
+
+.card {
+    padding-top: 30px;
+    padding-bottom: 24px;
+}
+
+.card__name {
+    margin-bottom: 10px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: getColor(primary);
+}
+
+.card__position {
+    margin-bottom: 16px;
+
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: getColor(secondary);
+}
+
+.social {
+    @extend %list;
+
+    display: flex;
+    justify-content: center;
+    color: getColor(icon);
+}
+
+.social__list {
+
+    &:not(:last-child) {
+        margin-right: 10px;
+    }
+}
+
+.social__link {
+    @extend %link;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 44px;
+    height: 44px;
+
+    border-radius: 50%;
+
+    transition: color getProperty(duration) getProperty(cubic),
+        background-color getProperty(duration) getProperty(cubic);
+
+    &:hover,
+    &:focus {
+        color: getColor(active-white);
+        background-color: getColor(accent);
+    }
+}
+
+.social__icon {
+    width: 20px;
+    height: 20px;
+
+    fill: currentColor;
+}

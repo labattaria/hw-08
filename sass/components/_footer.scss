@@ -1,0 +1,235 @@
+.footer {
+    padding: 60px 0;
+    background-color: getColor(background);
+}
+
+.footer--center {
+    
+    @media screen and (min-width: getSize(tablet)) {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: space-around;
+    }
+
+    @media screen and (min-width: getSize(desktop)) {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+}
+
+// Address
+.address {
+    text-align: center;
+
+    @media screen and (min-width: getSize(tablet)) {
+        flex-basis: 50%;
+    }
+
+    @media screen and (min-width: getSize(desktop)) {
+        text-align: left;
+        flex-basis: initial;
+    }
+}
+
+.address--footer {
+    margin-top: 20px;
+    margin-bottom: 60px;
+
+    @media screen and (min-width: getSize(tablet)) {
+        margin-bottom: 0;
+    }
+}
+
+.address__list {
+    @extend %list;
+    font-style: normal;
+}
+
+.address__item {
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: getColor(white-opacity);
+
+    &:not(:last-child) {
+        margin-bottom: 8px;
+    }
+}
+
+.address__text {
+    color: getColor(active-white);
+    transition: color getProperty(duration) getProperty(cubic);
+
+    &:hover,
+    &:focus {
+       color: getColor(accent);
+    }
+}
+
+.address__link {
+    @extend %link;
+
+    transition: color getProperty(duration) getProperty(cubic);
+
+    &:hover,
+    &:focus {
+        color: getColor(active-white);
+    }
+}
+
+// Join
+.join {
+    text-align: center;
+
+    @media screen and (min-width: getSize(tablet)) {
+        flex-basis: 50%;
+    }
+
+    @media screen and (min-width: getSize(desktop)) {
+        text-align: left;
+        flex-basis: initial;
+    }
+}
+
+.subtitle {
+    margin-bottom: 20px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: getColor(active-white);
+
+}
+
+.join__list {
+    @extend %list;
+
+    display: flex;
+    justify-content: center;
+
+    @media screen and (min-width: getSize(desktop)) {
+        justify-content: flex-start;
+    }
+}
+
+.join__item {
+
+    &:not(:last-child) {
+        margin-right: 10px;
+    }
+}
+
+.join__link {
+    @extend %link;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+
+    color: getColor(active-white);
+    background-color: getColor(white-opacity-bg);
+
+    border-radius: 50%;
+
+    transition: background-color getProperty(duration) getProperty(cubic);
+
+    &:hover,
+    &:focus {
+        background-color: getColor(accent);
+    }
+}
+
+.join__icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+// Subscribe
+.subscribe {
+    margin-top: 60px;
+
+    text-align: center;
+
+    @media screen and (min-width: getSize(desktop)) {
+        margin-top: 0;
+
+        text-align: left;
+    }
+}
+
+.subscribe__form {
+
+    @media screen and (min-width: getSize(desktop)) {
+        display: flex;
+    }
+}
+
+.subscribe__input {
+    margin-bottom: 20px;
+    padding: 15px;
+
+    min-width: 100%;
+    height: 50px;
+
+
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: getColor(active-white);
+    background-color: transparent;
+
+    border: 1px solid getColor(border-white);
+    border-radius: 4px;
+    box-shadow: getShadow(button);
+
+    transition: border-color getProperty(duration) getProperty(cubic);
+
+    &:hover,
+    &:focus {
+        border-color: getColor(accent);
+    }
+
+    @media screen and (min-width: getSize(mobile)) {
+        min-width: 450px;
+    }
+
+    @media screen and (min-width: getSize(desktop)) {
+        min-width: 358px;
+        margin-right: 12px;
+    }
+}
+
+.btn-subscribe {
+    @extend %btn;
+
+    display: flex;
+    align-items: center;
+    
+    margin: 0 auto;
+    padding: 10px 28px;
+
+    width: 200px;
+    height: 50px;
+
+    transition: background-color getProperty(duration) getProperty(cubic),
+        box-shadow getProperty(duration) getProperty(cubic);
+
+    &:hover,
+    &:focus {
+        background-color: getColor(btn-hover);
+        box-shadow: getShadow(button-hover);
+    }
+}
+
+.subscribe__icon {
+    margin-left: 10px;
+
+    width: 24px;
+    height: 24px;
+}

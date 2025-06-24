@@ -1,0 +1,55 @@
+.clients__list {
+    @extend %list;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    margin-top: - getProperty(gap-gallery);
+    margin-left: - getProperty(gap-gallery);
+
+    color: getColor(icon);
+
+    @media screen and (min-width: getSize(desktop)) {
+        flex-wrap: nowrap;
+    }
+}
+
+.clients__item {
+    margin-top: getProperty(gap-gallery);
+    margin-left: getProperty(gap-gallery);
+}
+
+.clients__link {
+    @extend %link;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 210px;
+    height: 92px;
+
+    border: 1px solid currentColor;
+    border-radius: 4px;
+
+    transition: color getProperty(duration) getProperty(cubic);
+
+    &:hover,
+    &:focus {
+        color: getColor(accent);
+    }
+
+    @media screen and (min-width: getSize(tablet)) {
+        min-width: 226px;
+    }
+
+    @media screen and (min-width: getSize(desktop)) {
+        min-width: 170px;
+    }
+}
+
+.clients__icon {
+    width: 106px;
+    height: 60px;
+    fill: currentColor;
+}
